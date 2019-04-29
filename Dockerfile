@@ -6,7 +6,8 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN useradd ttyjs --password '*' --create-home
 RUN apt-get update && \
     apt-get -y upgrade && \
-    apt-get -y install htop vim
+    apt-get -y install htop vim && \
+    apt-get -y install nmap
 
 USER ttyjs
 EXPOSE 8080
